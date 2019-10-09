@@ -2,6 +2,14 @@
 
 Slack API for restaurant. this allows to create and find restaurant using slack slash commands from slack.
 
+## Prerequisites
+
+* create workspace from [slack](https://www.slack.com) or login to your workspace
+* [CREATE SLACK APP](https://api.slack.com/)
+* follow step to enable slack features on App, here is an example on screenshoot below
+
+![Screen Shot 2019-10-09 at 22 52 53](https://user-images.githubusercontent.com/27460888/66519396-8f0f4b80-eae7-11e9-98c8-a2d923db2372.png)
+
 ## Slash command
 
 #### Search restaurant using name
