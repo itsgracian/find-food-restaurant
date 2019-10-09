@@ -2,8 +2,6 @@
 
 This APP allows to create and search restaurant using slack API.
 
-
-
 ## Prerequisites
 * MONGO DB [installation](https://www.mongodb.com/download-center/enterprise)
 * Create workspace from [slack](https://www.slack.com) or login to your workspace
@@ -13,9 +11,22 @@ This APP allows to create and search restaurant using slack API.
 ![Screen Shot 2019-10-09 at 22 52 53](https://user-images.githubusercontent.com/27460888/66519396-8f0f4b80-eae7-11e9-98c8-a2d923db2372.png)
 
 ## Usage
-### Slash command
 
-#### Search restaurant using name
+### Clone Repo
+```
+git clone https://github.com/itsgracian/search-restaurant.git
+```
+### install
+```
+yarn install or npm install
+```
+### start development server
+```
+yarn start:dev or npm run start:dev
+```
+### open slack workspace
+
+#### Search restaurant by name using slash command
 
 ```
 /find-restaurant nameofrestaurant
