@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node App",
-    "start:dev": "nodemon App"
+    "start:dev": "nodemon App",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@slack/events-api": "^2.3.0",
