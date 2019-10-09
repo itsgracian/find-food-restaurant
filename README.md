@@ -1,2 +1,2 @@
 # search-restaurant
-Search place to eat using slack with slash command /find-food
+Search place to eat using slack with only slash command /find-food
