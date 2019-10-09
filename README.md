@@ -1,4 +1,4 @@
-# search-restaurant
+# Search-restaurant
 
 Slack API for restaurant. this allows to create and find restaurant using slack slash commands from slack.
 
