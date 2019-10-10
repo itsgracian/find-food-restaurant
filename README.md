@@ -1,4 +1,4 @@
-# search-restaurant
+# Search-restaurant
 
 This APP allows to create and search restaurant using slack API.
 
@@ -16,15 +16,15 @@ This APP allows to create and search restaurant using slack API.
 ```
 git clone https://github.com/itsgracian/search-restaurant.git
 ```
-### install
+### Installation
 ```
 yarn install or npm install
 ```
-### start development server
+### Start development server
 ```
 yarn start:dev or npm run start:dev
 ```
-### open slack workspace
+### Open slack workspace
 
 #### Search restaurant by name using slash command
 
