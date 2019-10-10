@@ -37,8 +37,18 @@ yarn start:dev or npm run start:dev
 /all-restaurant
 ```
 
-###### Screenshots
+### Add new Restaurant
+```
+/create-restaurant
+
+```
+
+##### Screenshots
 <img width="1155" alt="Screen Shot 2019-10-10 at 13 51 03" src="https://user-images.githubusercontent.com/27460888/66566373-0df69980-eb65-11e9-82bf-8db91dbcb7ea.png">
+
+###### Add new restaurant
+
+![Screen Shot 2019-10-10 at 19 47 51](https://user-images.githubusercontent.com/27460888/66593318-0cde6000-eb97-11e9-9b69-c7e9792e1fe4.png)
 
 ## Author
 
