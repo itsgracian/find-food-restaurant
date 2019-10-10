@@ -1,13 +1,12 @@
-const allRestaurantResponse = (name, response) =>{
+const restaurantResponse = (name, response) =>{
 const responseInformation = {
     attachments: [
         {
             color: "#36a64f",
             auth_name:`${name}`,
-            title: "List of available restaurant",
+            title: `${response.name}`,
             fields: [
                 {
-                title: response.name,
                 value: response.description
                 }
             ]
@@ -29,7 +28,24 @@ const errorResponse = (errorMessage) =>{
    return response;
 }
 
+const allRestaurantResponse = (name, response) =>{
+  const returnBody = {
+      attachments:[
+          {
+              title: "List of available restaurant",
+              auth_name: `${name}`,
+              color: "#36a64f",
+              fields: response.map(item=>({
+                  title: item.name,
+                  value: item.description
+              }))
+          }
+      ]
+  };
+  return returnBody;
+};
 module.exports = {
-    allRestaurantResponse,
-    errorResponse
+    restaurantResponse,
+    errorResponse,
+    allRestaurantResponse
 };

@@ -1,16 +1,10 @@
 const express = require('express');
-const { createMessageAdapter } = require('@slack/interactive-messages');
-const { WebClient } = require('@slack/web-api');
 const {config} = require('dotenv');
-const {allRestaurantResponse, errorResponse } = require('../helpers/slackResponse');
+const {restaurantResponse, errorResponse, allRestaurantResponse } = require('../helpers/slackResponse');
 const App = express.Router();
 
 //config dotenv
 config();
-
-const { SLACK_OAUTH_TOKEN } = process.env;
-
-const web = new WebClient(SLACK_OAUTH_TOKEN);
 
 const message = (res,status, message, data,success) =>{
     return res.status(status).json({success, message, data});
@@ -32,7 +26,7 @@ App.post('/restaurant', async (req,res)=>{
             const responseError = errorResponse(errorMessage);
             return res.status(200).json(responseError);
         }
-        const response = allRestaurantResponse('gratien', find);
+        const response = restaurantResponse('gratien', find);
         return res.status(201).json(response);
     } catch (error) {
         const errorMessage =  'Error occured while fetching restaurants';
@@ -60,6 +54,25 @@ App.post('/restaurant/create', async(req,res)=>{
   }
 });
 
+/**
+ * fetch all restaurant
+ */
+App.post('/restaurant/all', async(req,res)=>{
+    try {
+        const find = await Restaurant.find({});
+        if(find.length<0){
+            const errorMessage = 'sorry no restaurant available this moment';
+            const response = errorResponse(errorMessage);
+            return res.status(200).json(response);
+        }
+       const responseInfo = allRestaurantResponse('gratien', find);
+        return res.status(200).json(responseInfo);
+    } catch (error) {
+        const errorMessage =  'Error occured while fetching restaurants';
+        const response = errorResponse(errorMessage);
+       return res.status(500).json(response);
+    }
+})
 
 
 module.exports = App;
