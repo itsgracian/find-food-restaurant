@@ -1,6 +1,8 @@
 # Search-restaurant
 
-This APP allows to create and search restaurant using slack API. it implemented using slash commands and interactive messages.
+This APP allows to create and search restaurant using slack API. it was implemented using two slack features such as :
+* slash commands and 
+* interactive messages.
 
 ## Prerequisites
 * MONGO DB [installation](https://www.mongodb.com/download-center/enterprise)
